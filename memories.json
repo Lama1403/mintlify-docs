@@ -136,7 +136,97 @@
       "lastAccessed": "2025-09-09T13:08:32.088Z",
       "lastVerified": "2025-09-09T13:08:32.088Z",
       "status": "fresh"
+    },
+    {
+      "id": "mem_1757423481183_f5ncpo7vt",
+      "content": "Restructuring navigation strategy: Convert to sidebar-based navigation with only APIs and Support as top tabs. Main content (Getting Started, Node Operations, Ecosystem, Tools) should be in sidebar for better UX. Need to update docs.json and fix internal links across all files.",
+      "type": "tip",
+      "tags": [
+        "tip",
+        "navigation",
+        "sidebar",
+        "restructuring",
+        "ux-improvement"
+      ],
+      "timestamp": "2025-09-09T13:11:21.182Z",
+      "context": "Documentation navigation restructuring",
+      "accessCount": 0,
+      "lastAccessed": "2025-09-09T13:11:21.182Z",
+      "lastVerified": "2025-09-09T13:11:21.182Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1757423514777_iqaxjwz6c",
+      "content": "Starting comprehensive internal link review and fix task for MDX files across directories: getting-started/, node-operations/, apis/, ecosystem/, tools-and-sdks/, support/. Need to fix common patterns like /zilliqa2/ links, ../endpoints.md, ../api/apis/, nodes sections, staking links, and remove .md extensions from internal links.",
+      "type": "troubleshooting",
+      "tags": [
+        "troubleshooting",
+        "api",
+        "internal-links",
+        "mdx",
+        "documentation",
+        "link-fixing"
+      ],
+      "timestamp": "2025-09-09T13:11:54.777Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-09-09T13:11:54.777Z",
+      "lastVerified": "2025-09-09T13:11:54.777Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1757423582050_g59ernpgw",
+      "content": "Found internal link issues in getting-started/index.mdx: \n1. /zilliqa2/changes should be /getting-started/changes\n2. /zilliqa2/endpoints should be /getting-started/endpoints  \n3. /zilliqa2/nodes should be /node-operations/nodes\n4. /zilliqa2/sdk should be /tools-and-sdks\n5. /zilliqa2/api/apis should be /apis\n\nAll these need to be updated to match the new directory structure.",
+      "type": "tip",
+      "tags": [
+        "tip",
+        "api",
+        "internal-links",
+        "getting-started",
+        "link-fixes"
+      ],
+      "timestamp": "2025-09-09T13:13:02.050Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-09-09T13:13:02.050Z",
+      "lastVerified": "2025-09-09T13:13:02.050Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1757423634602_42qzowt8p",
+      "content": "Fixed link in node-operations/nodes/checkpoints/index.mdx: Changed /apis/api-endpoints#block-explorer to /getting-started/endpoints#block-explorers to match the correct location of block explorers section.",
+      "type": "solution",
+      "tags": [
+        "solution",
+        "api",
+        "internal-links",
+        "node-operations",
+        "checkpoints",
+        "link-fixes"
+      ],
+      "timestamp": "2025-09-09T13:13:54.602Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-09-09T13:13:54.602Z",
+      "lastVerified": "2025-09-09T13:13:54.602Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1757423724037_gcpnyiwcf",
+      "content": "Completed comprehensive internal link review and fixes across all MDX files. Fixed 8 broken internal links in total:\n\nGETTING-STARTED FIXES (5 links in index.mdx):\n- /zilliqa2/changes → /getting-started/changes\n- /zilliqa2/endpoints → /getting-started/endpoints  \n- /zilliqa2/nodes → /node-operations/nodes\n- /zilliqa2/sdk → /tools-and-sdks\n- /zilliqa2/api/apis → /apis\n\nNODE-OPERATIONS FIXES (3 links across 2 files):\n- checkpoints/index.mdx: /apis/api-endpoints#block-explorer → /getting-started/endpoints#block-explorers\n- staking/index.mdx: delegatedstaking → /node-operations/staking/delegated-staking (2 occurrences)\n\nAll other directories (apis/, ecosystem/, tools-and-sdks/, support/) had correct links. External GitHub .md links were left unchanged as they are correct.",
+      "type": "solution",
+      "tags": [
+        "solution",
+        "api",
+        "internal-links",
+        "link-fixes",
+        "summary",
+        "mdx-files",
+        "documentation"
+      ],
+      "timestamp": "2025-09-09T13:15:24.037Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-09-09T13:15:24.037Z",
+      "lastVerified": "2025-09-09T13:15:24.037Z",
+      "status": "fresh"
     }
   ],
-  "lastUpdated": "2025-09-09T13:08:32.088Z"
+  "lastUpdated": "2025-09-09T13:15:24.037Z"
 }

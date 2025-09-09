@@ -9,52 +9,52 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "main": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "getting-started/index",
+          "getting-started/changes",
+          "getting-started/endpoints"
+        ]
+      },
+      {
+        "group": "Nodes & Validators",
+        "pages": [
+          "node-operations/nodes/index",
+          "node-operations/nodes/node",
+          "node-operations/nodes/passive-pruning"
+        ]
+      },
+      {
+        "group": "Checkpoints",
+        "pages": [
+          "node-operations/nodes/checkpoints/index",
+          "node-operations/nodes/checkpoints/download"
+        ]
+      },
+      {
+        "group": "Staking",
+        "pages": [
+          "node-operations/staking/index",
+          "node-operations/staking/delegated-staking"
+        ]
+      },
+      {
+        "group": "Tools & SDKs",
+        "pages": [
+          "tools-and-sdks/index"
+        ]
+      },
+      {
+        "group": "Ecosystem",
+        "pages": [
+          "ecosystem/index",
+          "ecosystem/thegraph"
+        ]
+      }
+    ],
     "tabs": [
-      {
-        "tab": "Getting Started",
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": [
-              "getting-started/index",
-              "getting-started/changes",
-              "getting-started/endpoints"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Node Operations",
-        "groups": [
-          {
-            "group": "Nodes & Validators",
-            "pages": [
-              "node-operations/nodes/index",
-              "node-operations/nodes/node"
-            ]
-          },
-          {
-            "group": "Checkpoints",
-            "pages": [
-              "node-operations/nodes/checkpoints/index",
-              "node-operations/nodes/checkpoints/download"
-            ]
-          },
-          {
-            "group": "Syncing & Pruning",
-            "pages": [
-              "node-operations/nodes/passive-pruning"
-            ]
-          },
-          {
-            "group": "Staking",
-            "pages": [
-              "node-operations/staking/index",
-              "node-operations/staking/delegated-staking"
-            ]
-          }
-        ]
-      },
       {
         "tab": "APIs",
         "groups": [
@@ -80,24 +80,6 @@
             "group": "Zilliqa APIs",
             "pages": [
               "apis/zilliqa/GetBalance"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Ecosystem",
-        "groups": [
-          {
-            "group": "Tools & SDKs",
-            "pages": [
-              "tools-and-sdks/index"
-            ]
-          },
-          {
-            "group": "Ecosystem",
-            "pages": [
-              "ecosystem/index",
-              "ecosystem/thegraph"
             ]
           }
         ]
