@@ -8,6 +8,10 @@
     "dark": "#00A386"
   },
   "favicon": "/favicon.svg",
+  "anchors": {
+    "from": "getting-started/index",
+    "to": "/"
+  },
   "navigation": {
     "main": [
       {
