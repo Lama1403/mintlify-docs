@@ -8,10 +8,6 @@
     "dark": "#00A386"
   },
   "favicon": "/favicon.svg",
-  "anchors": {
-    "from": "getting-started/index",
-    "to": "/"
-  },
   "navigation": {
     "tabs": [
       {
@@ -29,7 +25,7 @@
             "group": "Nodes & Validators",
             "pages": [
               "node-operations/nodes/index",
-              "node-operations/nodes/node",
+              "node-operations/nodes/setup",
               "node-operations/nodes/passive-pruning"
             ]
           },

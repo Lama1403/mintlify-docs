@@ -297,7 +297,42 @@
       "lastAccessed": "2025-09-09T13:20:21.351Z",
       "lastVerified": "2025-09-09T13:20:21.351Z",
       "status": "fresh"
+    },
+    {
+      "id": "mem_1757424077801_wv9cu82yy",
+      "content": "Validation complete. Found 18 navigation entries in docs.json, all corresponding .mdx files exist. 4 additional .mdx files exist but are not referenced in navigation. Tab structure follows Mintlify conventions with proper group organization. Anchors redirect from getting-started/index to root path.",
+      "type": "general",
+      "tags": [
+        "general",
+        "docs-validation",
+        "navigation",
+        "results"
+      ],
+      "timestamp": "2025-09-09T13:21:17.801Z",
+      "context": "Docs validation results",
+      "accessCount": 0,
+      "lastAccessed": "2025-09-09T13:21:17.801Z",
+      "lastVerified": "2025-09-09T13:21:17.801Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1757424113808_eipqns4bk",
+      "content": "Navigation fix complete: Successfully restructured to 3-tab layout - Docs (13 pages), APIs (4 pages), Support (1 page). All 18 navigation paths validated successfully. Found 4 additional API files not in navigation but available for future expansion. Navigation now properly exposes all main documentation sections via top-level Docs tab while keeping APIs and Support separate.",
+      "type": "troubleshooting",
+      "tags": [
+        "troubleshooting",
+        "api",
+        "navigation-fix",
+        "3-tab-layout",
+        "validation-complete"
+      ],
+      "timestamp": "2025-09-09T13:21:53.808Z",
+      "context": "Final navigation structure implementation",
+      "accessCount": 0,
+      "lastAccessed": "2025-09-09T13:21:53.808Z",
+      "lastVerified": "2025-09-09T13:21:53.808Z",
+      "status": "fresh"
     }
   ],
-  "lastUpdated": "2025-09-09T13:20:21.351Z"
+  "lastUpdated": "2025-09-09T13:21:53.808Z"
 }
