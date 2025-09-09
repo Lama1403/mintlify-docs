@@ -1,68 +1,114 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Zilliqa 2.0 Developer Portal",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#00D4AA",
+    "light": "#00E5BA",
+    "dark": "#00A386"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Getting Started",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Introduction",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "getting-started/index",
+              "getting-started/changes",
+              "getting-started/endpoints"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Node Operations",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Nodes & Validators",
             "pages": [
-              "api-reference/introduction"
+              "node-operations/nodes/index",
+              "node-operations/nodes/node"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Checkpoints",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "node-operations/nodes/checkpoints/index",
+              "node-operations/nodes/checkpoints/download"
+            ]
+          },
+          {
+            "group": "Syncing & Pruning",
+            "pages": [
+              "node-operations/nodes/passive-pruning"
+            ]
+          },
+          {
+            "group": "Staking",
+            "pages": [
+              "node-operations/staking/index",
+              "node-operations/staking/delegated-staking"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "APIs",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "apis/index"
+            ]
+          },
+          {
+            "group": "Ethereum APIs",
+            "pages": [
+              "apis/eth/eth_blockNumber"
+            ]
+          },
+          {
+            "group": "Admin APIs", 
+            "pages": [
+              "apis/admin/admin_getPeers"
+            ]
+          },
+          {
+            "group": "Zilliqa APIs",
+            "pages": [
+              "apis/zilliqa/GetBalance"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Ecosystem",
+        "groups": [
+          {
+            "group": "Tools & SDKs",
+            "pages": [
+              "tools-and-sdks/index"
+            ]
+          },
+          {
+            "group": "Ecosystem",
+            "pages": [
+              "ecosystem/index",
+              "ecosystem/thegraph"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Support",
+        "groups": [
+          {
+            "group": "Support & Feedback",
+            "pages": [
+              "support/index"
             ]
           }
         ]
@@ -71,19 +117,24 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Roadmap",
+          "href": "https://roadmap.zilliqa.com",
+          "icon": "map"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "Whitepaper",
+          "href": "https://drive.google.com/file/d/1XqSySl0w_OtxyxBZ0ahS06cqIv-vd10M/view",
+          "icon": "file-text"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "GitHub",
+          "href": "https://github.com/Zilliqa",
+          "icon": "github"
+        },
+        {
+          "anchor": "Discord",
+          "href": "https://discord.gg/zilliqa",
+          "icon": "discord"
         }
       ]
     }
@@ -95,14 +146,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Block Explorer",
+        "href": "https://testnet.zilliqa.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Faucet",
+      "href": "https://faucet.zilliqa.com"
     }
   },
   "contextual": {
@@ -119,9 +170,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/zilliqa",
+      "github": "https://github.com/Zilliqa",
+      "discord": "https://discord.gg/zilliqa"
     }
   }
 }

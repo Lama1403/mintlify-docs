@@ -1,0 +1,53 @@
+---
+title: "Download Checkpoints"
+description: "Download the latest checkpoint files for Zilliqa 2.0 networks"
+---
+
+# Download Checkpoints
+
+Use the following links to download checkpoint files for different Zilliqa 2.0 networks.
+
+## Devnet Checkpoints
+
+Visit the checkpoint repository for Devnet:
+- **Checkpoint URL**: https://checkpoints.zq2-devnet.zilliqa.com
+- **API Endpoint**: https://api.zq2-devnet.zilliqa.com
+
+<Note>
+Browse the XML listing to find the latest checkpoint files. Look for the topmost `<key>` tag which contains the most recent checkpoint file name in `block_num.dat` format.
+</Note>
+
+## Testnet Checkpoints
+
+Visit the checkpoint repository for Testnet:
+- **Checkpoint URL**: https://checkpoints.testnet.zilliqa.com  
+- **API Endpoint**: https://api.zq2-testnet.zilliqa.com
+
+<Note>
+Download the latest checkpoint file for faster synchronization. Historical checkpoints are available in the `previous/` directory.
+</Note>
+
+## Mainnet Checkpoints
+
+Visit the checkpoint repository for Mainnet:
+- **Checkpoint URL**: https://checkpoints.zilliqa.com
+- **API Endpoint**: https://api.zq2-mainnet.zilliqa.com
+
+<Warning>
+Always verify the block hash when configuring checkpoints in your node configuration file. Use the corresponding API endpoint to retrieve the block hash for validation.
+</Warning>
+
+## How to Use
+
+1. Visit the appropriate checkpoint URL for your target network
+2. Find the latest checkpoint file (topmost `<key>` tag in the XML listing)
+3. Download the checkpoint file using `wget` or your browser:
+   ```bash
+   wget https://checkpoints.<network>.zilliqa.com/<block_num.dat>
+   ```
+4. Configure the checkpoint in your node configuration file
+5. Start your node following the [checkpoint setup guide](/node-operations/nodes/checkpoints)
+
+<Info>
+Checkpoints are generated every 86400 blocks and provide a validated state from which nodes can begin synchronization, significantly reducing startup time compared to syncing from genesis.
+</Info>

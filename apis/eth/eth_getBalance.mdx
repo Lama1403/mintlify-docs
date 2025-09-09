@@ -1,0 +1,49 @@
+---
+title: eth_getBalance
+description: eth,balance,get
+---
+
+Returns the balance, in `Wei`, of a given account.
+
+Balances are maintained in `Wei` in Zilliqa 2. Because 1 wei = 10^6 ZIL, this value will be 1_000_000 times larger than that given by `GetBalance`.
+
+## Parameters
+
+### Address
+
+The address of the account to query as a hex value.
+
+### Block ID
+
+A block identifier, as specified by https://eips.ethereum.org/EIPS/eip-1898.
+
+### Example Request
+
+<CodeGroup>
+
+```shell cURL
+curl -d '{
+  "id": "1",
+  "jsonrpc": "2.0",
+  "method": "eth_getBalance",
+  "params": [
+  "0xcb57ec3f064a16cadb36c7c712f4c9fa62b77415", "latest"
+]}' -H "Content-Type: application/json" -X POST "https://api.zilliqa.com/"
+```
+
+</CodeGroup>
+
+### Example response
+
+```json
+{"jsonrpc":"2.0","result":"0x10f0cf064dd59200000","id":"1"}
+```
+
+### Arguments
+
+| Parameter | Type   | Required | Description                 |
+|-----------|--------|----------|-----------------------------|
+| `id`      | string | Required | `"1"`                       |
+| `jsonrpc` | string | Required | `"2.0"`                     |
+| `method`  | string | Required | `"eth_getBalance"`          |
+| `params`  | array  | Required | `[ address, block_number ]` |
