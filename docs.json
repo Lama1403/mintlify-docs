@@ -13,52 +13,55 @@
     "to": "/"
   },
   "navigation": {
-    "main": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "getting-started/index",
-          "getting-started/changes",
-          "getting-started/endpoints"
-        ]
-      },
-      {
-        "group": "Nodes & Validators",
-        "pages": [
-          "node-operations/nodes/index",
-          "node-operations/nodes/node",
-          "node-operations/nodes/passive-pruning"
-        ]
-      },
-      {
-        "group": "Checkpoints",
-        "pages": [
-          "node-operations/nodes/checkpoints/index",
-          "node-operations/nodes/checkpoints/download"
-        ]
-      },
-      {
-        "group": "Staking",
-        "pages": [
-          "node-operations/staking/index",
-          "node-operations/staking/delegated-staking"
-        ]
-      },
-      {
-        "group": "Tools & SDKs",
-        "pages": [
-          "tools-and-sdks/index"
-        ]
-      },
-      {
-        "group": "Ecosystem",
-        "pages": [
-          "ecosystem/index",
-          "ecosystem/thegraph"
-        ]
-      }
-    ],
     "tabs": [
+      {
+        "tab": "Docs",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "getting-started/index",
+              "getting-started/changes",
+              "getting-started/endpoints"
+            ]
+          },
+          {
+            "group": "Nodes & Validators",
+            "pages": [
+              "node-operations/nodes/index",
+              "node-operations/nodes/node",
+              "node-operations/nodes/passive-pruning"
+            ]
+          },
+          {
+            "group": "Checkpoints",
+            "pages": [
+              "node-operations/nodes/checkpoints/index",
+              "node-operations/nodes/checkpoints/download"
+            ]
+          },
+          {
+            "group": "Staking",
+            "pages": [
+              "node-operations/staking/index",
+              "node-operations/staking/delegated-staking"
+            ]
+          },
+          {
+            "group": "Tools & SDKs",
+            "pages": [
+              "tools-and-sdks/index"
+            ]
+          },
+          {
+            "group": "Ecosystem",
+            "pages": [
+              "ecosystem/index",
+              "ecosystem/thegraph"
+            ]
+          }
+        ]
+      },
       {
         "tab": "APIs",
         "groups": [
