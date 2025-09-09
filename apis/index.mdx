@@ -1,0 +1,210 @@
+---
+title: "Supported APIs"
+description: "Overview of APIs supported in Zilliqa 2.0 including Ethereum, Zilliqa legacy, and custom APIs"
+---
+
+# APIs
+
+## Zilliqa 2 APIs
+
+The APIs implemented in Zilliqa 2 aim to provide the greatest possible compatibility with applications running on other EVM chains, as well as with applications developed for Zilliqa 1. Expand the menu on the left to navigate through the detailed documentation of the supported API methods.
+
+## Supported APIs
+
+Zilliqa 2 supports APIs from a number of sources:
+
+ * `erigon_` and `ots_` APIs are provided for compatibility with
+   Zilliqa's fork of
+   [otterscan](https://github.com/Zilliqa/otterscan). These APIs are
+   intended to be compatible with [the otterscan json-rpc API
+   spec](https://github.com/otterscan/otterscan/blob/develop/docs/custom-jsonrpc.md).
+
+ * Ethereum APIs (generally prefixed with `eth_`) are specified by the
+   [Ethereum JSON-RPC
+   spec](https://ethereum.github.io/execution-apis/api-documentation/)
+   and intended to be compatible with Zilliqa 1,
+   [geth](https://geth.ethereum.org/) and
+   [erigon](https://erigon.tech/).  Some reference material is also
+   taken from [QuickNode](https://www.quicknode.com/docs/ethereum),
+   [Infura](https://docs.infura.io/) and
+   [Alchemy](https://docs.alchemy.com/reference).
+
+  * Zilliqa legacy APIs are intended, as far as possible, to be compatible
+    with existing Zilliqa 1 applications. There are various
+    differences due to the different construction of Zilliqa 2 which
+    are noted on the individual API pages.
+
+## Zilliqa address checksums
+
+Prior to [ZIP-1](https://github.com/Zilliqa/ZIP/blob/master/zips/zip-1.md), Zilliqa's original addressing format featured Ethereum-style hex addresses with a checksum procedure:
+
+ * Lowercase the hex address given to give `Lower(Address)`
+ * Compute `SHA256(BytesFromHex(Lower(Address)))`
+ * Count through the hex digits of `Lower(Address)`, from left to right, starting at 0, with index `i`.
+ * If the `(255-(6*i))`th bit is set and the `i`th hex digit is a letter, uppercase it.
+
+This is essentially the same procedure as [ERC-55](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md) but with a shift of 6 instead of 4.
+
+## List of entry points
+
+If an API is not mentioned in this table, support for it is not planned.
+Please open an issue or PR for APIs that you think should be included.
+
+<Info>
+**Legend:**
+- 🟢 = Fully supported
+- 🟠 = Partially implemented, full support planned  
+- 🔴 = Not yet implemented, full support planned
+- 🔵 = Inapplicable to Zilliqa 2; we have no plans to implement it
+- 🟣 = Implemented, but not yet documented
+</Info>
+
+| Method                                    | Status                                          |
+| ----------------------------------------- | ----------------------------------------------- |
+|`admin_blockRange`| 🟢|
+|`admin_clearMempool`| 🟢|
+|`admin_consensusInfo`| 🟢|
+|`admin_forceView`| 🟢|
+|`admin_generateCheckpoint`| 🟢|
+|`admin_getLeaders`| 🟢|
+|`admin_getPeers`| 🟢|
+|`admin_votesReceived`| 🟢|
+|`debug_getBadBlocks`| 🟣|
+|`debug_getTrieFlushInterval`| 🟣|
+|`debug_storageRangeAt`| 🟣|
+|`debug_traceBlock`| 🟣|
+|`debug_traceBlockByHash`| 🟣|
+|`debug_traceBlockByNumber`| 🟢|
+|`debug_traceCall`| 🟣|
+|`debug_traceTransaction`| 🟢|
+|`erigon_blockNumber`| 🟣|
+|`erigon_forks`| 🟣|
+|`erigon_getBlockByTimestamp`| 🟣|
+|`erigon_getBlockReceiptsByBlockHash`| 🟣|
+|`erigon_getHeaderByHash`| 🟣|
+|`erigon_getHeaderByNumber`| 🟢|
+|`erigon_getLatestLogs`| 🟣|
+|`erigon_getLogsByHash`| 🟣|
+|`eth_accounts`| 🟢|
+|`eth_blobBaseFee`| 🟣|
+|`eth_blockNumber`| 🟢|
+|`eth_call`| 🟢|
+|`eth_chainId`| 🟢|
+|`eth_estimateGas`| 🟢|
+|`eth_feeHistory`| 🟣|
+|`eth_gasPrice`| 🟢|
+|`eth_getAccount`| 🟣|
+|`eth_getBalance`| 🟢|
+|`eth_getBlockByHash`| 🟢|
+|`eth_getBlockByNumber`| 🟢|
+|`eth_getBlockReceipts`| 🟣|
+|`eth_getBlockTransactionCountByHash`| 🟢|
+|`eth_getBlockTransactionCountByNumber`| 🟢|
+|`eth_getCode`| 🟢|
+|`eth_getFilterChanges`| 🟢|
+|`eth_getFilterLogs`| 🟢|
+|`eth_getLogs`| 🟢|
+|`eth_getProof`| 🟣|
+|`eth_getStorageAt`| 🟢|
+|`eth_getTransactionByBlockHashAndIndex`| 🟢|
+|`eth_getTransactionByBlockNumberAndIndex`| 🟢|
+|`eth_getTransactionByHash`| 🟢|
+|`eth_getTransactionCount`| 🟢|
+|`eth_getTransactionReceipt`| 🟢|
+|`eth_getUncleByBlockHashAndIndex`| 🟢|
+|`eth_getUncleByBlockNumberAndIndex`| 🟣|
+|`eth_getUncleCountByBlockHash`| 🟢|
+|`eth_getUncleCountByBlockNumber`| 🟢|
+|`eth_hashrate`| 🟣|
+|`eth_maxPriorityFeePerGas`| 🟣|
+|`eth_mining`| 🟢|
+|`eth_newBlockFilter`| 🟣|
+|`eth_newFilter`| 🟢|
+|`eth_newPendingTransactionFilter`| 🟢|
+|`eth_protocolVersion`| 🟢|
+|`eth_sendRawTransaction`| 🟢|
+|`eth_signTransaction`| 🟣|
+|`eth_simulateV1`| 🟣|
+|`eth_submitWork`| 🟣|
+|`eth_subscribe`| 🟣|
+|`eth_syncing`| 🟣|
+|`eth_uninstallFilter`| 🟢|
+|`eth_unsubscribe`| 🟣|
+|`net_listening`| 🟢|
+|`net_peerCount`| 🟢|
+|`net_version`| 🟢|
+|`ots_getApiLevel`| 🟢|
+|`ots_getBlockDetails`| 🟢|
+|`ots_getBlockDetailsByHash`| 🟢|
+|`ots_getBlockTransactions`| 🟣|
+|`ots_getContractCreator`| 🟣|
+|`ots_getInternalOperations`| 🟣|
+|`ots_getTransactionBySenderAndNonce`| 🟣|
+|`ots_getTransactionError`| 🟣|
+|`ots_hasCode`| 🟣|
+|`ots_searchTransactionsAfter`| 🟣|
+|`ots_searchTransactionsBefore`| 🟣|
+|`ots_traceTransaction`| 🟣|
+|`trace_block`| 🟢|
+|`trace_call`| 🟣|
+|`trace_callMany`| 🟣|
+|`trace_filter`| 🟢|
+|`trace_rawTransaction`| 🟣|
+|`trace_replayBlockTransactions`| 🟣|
+|`trace_replayTransaction`| 🟢|
+|`trace_transaction`| 🟢|
+|`txpool_content`| 🟢|
+|`txpool_contentFrom`| 🟢|
+|`txpool_inspect`| 🟢|
+|`txpool_status`| 🟢|
+|`web3_ClientVersion`| 🔴|
+|`web3_clientVersion`| 🟣|
+|`web3_sha3`| 🟢|
+|`CreateTransaction`| 🟢|
+|`DSBlockListing`| 🟠|
+|`GetBalance`| 🟢|
+|`GetBlockchainInfo`| 🟢|
+|`GetContractAddressFromTransactionID`| 🟢|
+|`GetCurrentDSComm`| 🟠|
+|`GetCurrentDSEpoch`| 🟠|
+|`GetCurrentMiniEpoch`| 🟢|
+|`GetDSBlock`| 🟠|
+|`GetDSBlockRate`| 🟠|
+|`GetDSBlockVerbose`| 🟠|
+|`GetLatestDSBlock`| 🟠|
+|`GetLatestTxBlock`| 🟢|
+|`GetMinerInfo`| 🟠|
+|`GetMinimumGasPrice`| 🟢|
+|`GetNetworkId`| 🟢|
+|`GetNodeType`| 🟠|
+|`GetNumDSBlocks`| 🟠|
+|`GetNumPeers`| 🟠|
+|`GetNumTransactions`| 🟢|
+|`GetNumTxBlocks`| 🟢|
+|`GetNumTxnsDSEpoch`| 🟠|
+|`GetNumTxnsTXEpoch`| 🟢|
+|`GetPrevDSDifficulty`| 🟠|
+|`GetPrevDifficulty`| 🟠|
+|`GetRecentTransactions`| 🟢|
+|`GetShardingStructure`| 🔵|
+|`GetSmartContractCode`| 🟢|
+|`GetSmartContractInit`| 🟢|
+|`GetSmartContractState`| 🟢|
+|`GetSmartContractSubState`| 🟢|
+|`GetSmartContracts`| 🟢|
+|`GetSoftConfirmedTransaction`| 🟢|
+|`GetStateProof`| 🟠|
+|`GetTotalCoinSupply`| 🟢|
+|`GetTotalCoinSupplyAsInt`| 🟢|
+|`GetTransaction`| 🟢|
+|`GetTransactionRate`| 🟢|
+|`GetTransactionStatus`| 🟢|
+|`GetTransactionsForTxBlock`| 🟢|
+|`GetTransactionsForTxBlockEx`| 🟢|
+|`GetTxBlock`| 🟢|
+|`GetTxBlockRate`| 🟢|
+|`GetTxBlockVerbose`| 🟠|
+|`GetTxnBodiesForTxBlock`| 🟣|
+|`GetTxnBodiesForTxBlockEx`| 🟢|
+|`GetVersion`| 🟢|
+|`TxBlockListing`| 🟢|
